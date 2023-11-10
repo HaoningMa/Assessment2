@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "Promotion";
+}
+<div class="wrapper row1">
+    <header id="header" class="clear">
+        <div id="logo" class="fl_left">
+            <h1><a href="index.html">Coffee Shop</a></h1>
+        </div>
+        <div class="fl_right">
+            <ul class="inline">
+                <li> +123 456 789</li>
+                <li>coffeelove@outlook.com</li>
+                <audio id="myAudio" src="~/Content/music.mp3" loop></audio>
+                <li><button onmouseover="playOrPauseAudio()">music</button></li>
+            </ul>
+        </div>
+    </header>
+</div>
+
+<div class="wrapper row2">
+    <nav id="mainav" class="clear">
+        <ul class="clear">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>
+                <a class="drop" href="#">Pages</a>
+                <ul>
+                    <li>@Html.ActionLink("Location", "location", "Home")</li>
+                    <li class="active">@Html.ActionLink("Promotion", "Promotion", "Home")</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Product", "product", "Home")</li>
+            <li>@Html.ActionLink("Contact", "contact", "Home")</li>
+            <li>@Html.ActionLink("Custom", "Index", "Custom")</li>
+            <li>@Html.ActionLink("Area", "Index", "Area")</li>
+        </ul>
+    </nav>
+</div>
+<div class="wrapper row3">
+    <main class="container clear">
+        <div class="content">
+            <h1>video</h1>
+            <video controls width="640" height="360">
+                <source src="~/Content/images/demo/video/video.mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="clear"></div>
+    </main>
+</div>
+<div class="wrapper row4">
+    <footer id="footer" class="clear">
+        <div class="one_quarter first">
+            <h6 class="title">Company Details</h6>
+            <address class="btmspace-15">
+                Coffee Shop<br>
+                Street Name &amp; Number<br>
+                Town<br>
+                Postcode/Zip
+            </address>
+            <ul class="nospace">
+                <li class="btmspace-10"><span class="fa fa-phone"></span> +123 456 789</li>
+                <li><span class="fa fa-envelope-o"></span><a href="mailto:coffeelove@outlook.com" target="_blank">coffeelove@outlook.com</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Quick Links</h6>
+            <ul class="nospace linklist">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Ordering</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Business Hours</h6>
+            <article>
+                <h2 class="nospace"><a href="#">Legal Working Day</a></h2>
+                <div><p>Monday to Firday 8am to 9pm</p></div>
+                <p>If there are special circumstances, advance notice will be given</p>
+            </article>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Keep In Touch</h6>
+            <form class="btmspace-30" method="post" action="#">
+                <fieldset>
+                    <legend>Newsletter:</legend>
+                    <input class="btmspace-15" type="text" value="" placeholder="Email">
+                </fieldset>
+            </form>
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">HTML5 & CSS3 validators</a>
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,163 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!-- 头 -->
+<div class="wrapper row1">
+    <header id="header" class="clear">
+        <div id="logo" class="fl_left">
+            <h1><a href="index.html">Coffee Shop</a></h1>
+        </div>
+        <div class="fl_right">
+            <ul class="inline">
+                <li> +123 456 789</li>
+                <li>coffeelove@outlook.com</li>
+                <audio id="myAudio" src="~/Content/music.mp3" loop></audio>
+                <li><button onmouseover="playOrPauseAudio()">music</button></li>
+            </ul>
+        </div>
+    </header>
+</div>
+<!--导航栏 -->
+<div class="wrapper row2">
+    <nav id="mainav" class="clear">
+        <ul class="clear">
+            <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>
+                <a class="drop" href="#">Pages</a>
+                <ul>
+                    <li>@Html.ActionLink("Location", "location", "Home")</li>
+                    <li>@Html.ActionLink("Promotion", "Promotion", "Home")</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Product", "product", "Home")</li>
+            <li>@Html.ActionLink("Contact", "contact", "Home")</li>
+            <li>@Html.ActionLink("Custom", "Index", "Custom")</li>
+            <li>@Html.ActionLink("Area", "Index", "Area")</li>
+        </ul>
+    </nav>
+</div>
+
+
+<!-- 滚动图 -->
+
+<div class="wrapper row3">
+    <div id="slider" class="clear">
+        <div class="image-container">
+            <img class="radius-10" src="~/Content/images/demo/slides/slide-01.jpg" alt="picture">
+            <img class="radius-10" src="~/Content/images/demo/slides/slide-02.jpg" alt="picture">
+            <img class="radius-10" src="~/Content/images/demo/slides/slide-03.jpg" alt="picture">
+        </div>
+    </div>
+</div>
+
+
+<!-- 内容 -->
+<div class="wrapper row3">
+    <main class="container clear">
+        <ul class="nospace group btmspace-80">
+            <li class="one_third first">
+                <article>
+                    <h6 class="heading"><a href="#">Convenient Transportation</a></h6>
+                    <p>The store is located in the city center and is accessible by multiple subway buses</p>
+                    <footer><a href="#">Read More &raquo;</a></footer>
+                </article>
+            </li>
+            <li class="one_third">
+                <article>
+                    <h6 class="heading"><a href="#">Elegant Environment</a></h6>
+                    <p>The indoor environment is clean and tidy, and the environment is pleasant</p>
+                    <footer><a href="#">Read More &raquo;</a></footer>
+                </article>
+            </li>
+            <li class="one_third">
+                <article>
+                    <h6 class="heading"><a href="#">Best Coffee</a></h6>
+                    <p>Handmade freshly ground coffee with high-end quality</p>
+                    <footer><a href="#">Read More &raquo;</a></footer>
+                </article>
+            </li>
+        </ul>
+        <br>
+        <!-- 小图 -->
+        <h2 class="sectiontitle">Functional Partitioning</h2>
+        <div class="carousel-container">
+
+            <img class="radius-10 btmspace-10 imagese" src="~/Content/images/demo/01.jpg" alt="Image" onmouseover="addEffect(this)" onmouseout="removeEffect(this)">
+            <img class="radius-10 btmspace-10 imagese" src="~/Content/images/demo/02.jpg" alt="Image" onmouseover="addEffect(this)" onmouseout="removeEffect(this)">
+            <img class="radius-10 btmspace-10 imagese" src="~/Content/images/demo/03.jpg" alt="Image" onmouseover="addEffect(this)" onmouseout="removeEffect(this)">
+            <img class="radius-10 btmspace-10 imagese" src="~/Content/images/demo/04.jpg" alt="Image" onmouseover="addEffect(this)" onmouseout="removeEffect(this)">
+            <img class="radius-10 btmspace-10 imagese" src="~/Content/images/demo/05.jpg" alt="Image" onmouseover="addEffect(this)" onmouseout="removeEffect(this)">
+
+        </div>
+        <br>
+
+        <!-- 两小图 -->
+        <h2 class="sectiontitle">Customer Feedback</h2>
+        <ul class="nospace group">
+            <li class="one_half first">
+                <article>
+                    <img class="imgl radius-10 image-hover" src="~/Content/images/demo/06.jpg" alt="">
+                    <h6 class="heading"><a href="#">Tony</a></h6>
+                    <p>The quality of coffee is very good, giving me a great experience</p>
+                </article>
+            </li>
+            <li class="one_half">
+                <article>
+                    <img class="imgl radius-10 image-hover" src="~/Content/images/demo/07.jpg" alt="">
+                    <h6 class="heading"><a href="#">Lisa</a></h6>
+                    <p>The environment is very beautiful. I plan to introduce friends next time</p>
+                </article>
+            </li>
+        </ul>
+        <!-- / main body -->
+        <div class="clear"></div>
+    </main>
+</div>
+
+
+<!-- 底 -->
+<div class="wrapper row4">
+    <footer id="footer" class="clear">
+        <div class="one_quarter first">
+            <h6 class="title">Company Details</h6>
+            <address class="btmspace-15">
+                Coffee Shop<br>
+                Street Name &amp; Number<br>
+                Town<br>
+                Postcode/Zip
+            </address>
+            <ul class="nospace">
+                <li class="btmspace-10"><span class="fa fa-phone"></span> +123 456 789</li>
+                <li><span class="fa fa-envelope-o"></span><a href="mailto:coffeelove@outlook.com" target="_blank">coffeelove@outlook.com</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Quick Links</h6>
+            <ul class="nospace linklist">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Ordering</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Business Hours</h6>
+            <article>
+                <h2 class="nospace"><a href="#">Legal Working Day</a></h2>
+                <div><p>Monday to Firday 8am to 9pm</p></div>
+                <p>If there are special circumstances, advance notice will be given</p>
+            </article>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Keep In Touch</h6>
+            <form class="btmspace-30" method="post" action="#">
+                <fieldset>
+                    <legend>Newsletter:</legend>
+                    <input class="btmspace-15" type="text" value="" placeholder="Email">
+                </fieldset>
+            </form>
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">HTML5 & CSS3 validators</a>
+        </div>
+    </footer>
+</div>

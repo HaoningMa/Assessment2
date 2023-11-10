@@ -1,0 +1,180 @@
+﻿
+@{
+    ViewBag.Title = "contact";
+}
+
+<div class="wrapper row1">
+    <header id="header" class="clear">
+        <div id="logo" class="fl_left">
+            <h1><a href="index.html">Coffee Shop</a></h1>
+        </div>
+        <div class="fl_right">
+            <ul class="inline">
+                <li> +123 456 789</li>
+                <li>coffeelove@outlook.com</li>
+                <audio id="myAudio" src="~/Content/music.mp3" loop></audio>
+                <li><button onmouseover="playOrPauseAudio()">music</button></li>
+            </ul>
+        </div>
+    </header>
+</div>
+<div class="wrapper row2">
+    <nav id="mainav" class="clear">
+        <ul class="clear">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>
+                <a class="drop" href="#">Pages</a>
+                <ul>
+                    <li>@Html.ActionLink("Location", "location", "Home")</li>
+                    <li>@Html.ActionLink("Promotion", "Promotion", "Home")</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Product", "product", "Home")</li>
+            <li class="active">@Html.ActionLink("Contact", "contact", "Home")</li>
+            <li>@Html.ActionLink("Custom", "Index", "Custom")</li>
+            <li>@Html.ActionLink("Area", "Index", "Area")</li>
+        </ul>
+    </nav>
+</div>
+
+<div class="wrapper row3">
+    <main class="container clear">
+        <div class="content three_quarter first">
+            <h1>About Us</h1>
+            <img class="imgr borderedbox inspace-5" src="~/Content/images/demo/imgl.jpg" alt="">
+            <p>Thank you for visiting our website and expressing your interest in contacting us. At Coffee Shop, we believe in the power of communication. We value every interaction with our customers and are committed to providing outstanding support. Whether you have a question about our products, need guidance on placing an order, or simply want to share your thoughts, we are here to listen and help. You can reach us through the contact information provided below.</p>
+            <img class="imgl borderedbox inspace-5" src="~/Content/images/demo/imgr.jpg" alt="">
+            <p>Your satisfaction is our ultimate goal. We genuinely appreciate your decision to reach out to us, and we want to assure you that we take your feedback seriously. Our team is committed to providing you with the highest level of service and support. Rest assured, your message has been received, and we will respond to your inquiry as soon as possible. Thank you for choosing to contact us.</p>
+            <div id="comments">
+                <h2>Comments</h2>
+                <ul>
+                    <li>
+                        <article>
+                            <header>
+                                <figure class="avatar"><img src="~/Content/images/demo/avatar.png" alt=""></figure>
+                                <address>
+                                    By <a href="#">Tony</a>
+                                </address>
+                            </header>
+                            <div class="comcont">
+                                <p>I recently visited this coffee shop and I must say, the experience was exceptional! The baristas were friendly and knowledgeable, and they made me the best latte I've ever had. The atmosphere was cozy and inviting, perfect for catching up with friends or enjoying some quiet time. I highly recommend this place to all coffee lovers!</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header>
+                                <figure class="avatar"><img src="~/Content/images/demo/avatar.png" alt=""></figure>
+                                <address>
+                                    By <a href="#">Lisa</a>
+                                </address>                               
+                            </header>
+                            <div class="comcont">
+                                <p>I'm a regular at this coffee shop and it never disappoints. The quality of their coffee is outstanding - rich, flavorful, and always brewed to perfection. The staff here is attentive and always goes the extra mile to ensure a great customer experience. Whether I need a quick pick-me-up or a relaxing afternoon with a cappuccino, this is my go-to spot.</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header>
+                                <figure class="avatar"><img src="~/Content/images/demo/avatar.png" alt=""></figure>
+                                <address>
+                                    By <a href="#">Peter</a>
+                                </address>
+                            </header>
+                            <div class="comcont">
+                                <p>I stumbled upon this hidden gem of a coffee shop and it quickly became my favorite. The attention to detail in every cup of coffee is evident and the flavors are unique and delightful. The ambiance is cozy with comfortable seating and charming decor. The staff is friendly and passionate about their craft, making each visit a memorable one.</p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="sidebar one_quarter">
+            <h6>Satisfaction Level</h6>
+            <nav class="sdb_holder">
+                <ul>
+                    <li><a href="#">Very satisfied - Level 6</a></li>
+                    <li><a href="#">Satisfied - Level 5</a></li>
+                    <li><a href="#">Somewhat satisfied - Level 4</a></li>
+                    <li><a href="#">Somewhat dissatisfied - Level 3</a></li>
+                    <li><a href="#">Dissatisfied - Level 2</a></li>
+                    <li><a href="#">Very dissatisfied - Level 1</a></li>
+                </ul>
+            </nav>
+            <div class="sdb_holder">
+                <h6>Mail Format</h6>
+                <address>
+                    Full Name<br>
+                    Address Line 1<br>
+                    Address Line 2<br>
+                    Town/City<br>
+                    Postcode/Zip<br>
+                    <br>
+                    Tel: xxxx xxxx xxxxxx<br>
+                    Email: contact@domain.com
+                </address>
+            </div>
+            <div class="sdb_holder">
+                <article>
+                    <h6>Unexpected Resolution</h6>
+                    <ul>
+                        <li>Check your internet connection</li>
+                        <li>Try a different browser</li>
+                        <li>Clear your cache and cookies</li>
+                    </ul>
+                    <p>If none of these solutions work, please let us know by sending an email to coffeelove@outlook.com. We apologize for any inconvenience caused and will do our best to assist you as soon as possible.</p>
+                </article>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </main>
+</div>
+
+<div class="wrapper row4">
+    <footer id="footer" class="clear">
+        <div class="one_quarter first">
+            <h6 class="title">Company Details</h6>
+            <address class="btmspace-15">
+                Coffee Shop<br>
+                Street Name &amp; Number<br>
+                Town<br>
+                Postcode/Zip
+            </address>
+            <ul class="nospace">
+                <li class="btmspace-10"><span class="fa fa-phone"></span> +123 456 789</li>
+                <li><span class="fa fa-envelope-o"></span><a href="mailto:coffeelove@outlook.com" target="_blank">coffeelove@outlook.com</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Quick Links</h6>
+            <ul class="nospace linklist">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Ordering</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Business Hours</h6>
+            <article>
+                <h2 class="nospace"><a href="#">Legal Working Day</a></h2>
+                <div><p>Monday to Firday 8am to 9pm</p></div>
+                <p>If there are special circumstances, advance notice will be given</p>
+            </article>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Keep In Touch</h6>
+            <form class="btmspace-30" method="post" action="#">
+                <fieldset>
+                    <legend>Newsletter:</legend>
+                    <input class="btmspace-15" type="text" value="" placeholder="Email">
+                </fieldset>
+            </form>
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">HTML5 & CSS3 validators</a>
+        </div>
+    </footer>
+</div>

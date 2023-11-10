@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Assessment2.Models.Area>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="wrapper row1">
+    <header id="header" class="clear">
+        <div id="logo" class="fl_left">
+            <h1><a href="index.html">Coffee Shop</a></h1>
+        </div>
+        <div class="fl_right">
+            <ul class="inline">
+                <li> +123 456 789</li>
+                <li>coffeelove@outlook.com</li>
+                <audio id="myAudio" src="~/Content/music.mp3" loop></audio>
+                <li><button onmouseover="playOrPauseAudio()">music</button></li>
+            </ul>
+        </div>
+    </header>
+</div>
+<!--导航栏 -->
+<div class="wrapper row2">
+    <nav id="mainav" class="clear">
+        <ul class="clear">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>
+                <a class="drop" href="#">Pages</a>
+                <ul>
+                    <li>@Html.ActionLink("Location", "location", "Home")</li>
+                    <li>@Html.ActionLink("Promotion", "Promotion", "Home")</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Product", "product", "Home")</li>
+            <li>@Html.ActionLink("Contact", "contact", "Home")</li>
+            <li>@Html.ActionLink("Custom", "Index", "Custom")</li>
+            <li class="active">@Html.ActionLink("Area", "Index", "Area")</li>
+        </ul>
+    </nav>
+</div>
+<div class="wrapper row3">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Name, "Index", "Custom", new { are = item.Name }, null)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<div class="wrapper row4">
+    <footer id="footer" class="clear">
+        <div class="one_quarter first">
+            <h6 class="title">Company Details</h6>
+            <address class="btmspace-15">
+                Coffee Shop<br>
+                Street Name &amp; Number<br>
+                Town<br>
+                Postcode/Zip
+            </address>
+            <ul class="nospace">
+                <li class="btmspace-10"><span class="fa fa-phone"></span> +123 456 789</li>
+                <li><span class="fa fa-envelope-o"></span><a href="mailto:coffeelove@outlook.com" target="_blank">coffeelove@outlook.com</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Quick Links</h6>
+            <ul class="nospace linklist">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Ordering</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Business Hours</h6>
+            <article>
+                <h2 class="nospace"><a href="#">Legal Working Day</a></h2>
+                <div><p>Monday to Firday 8am to 9pm</p></div>
+                <p>If there are special circumstances, advance notice will be given</p>
+            </article>
+        </div>
+        <div class="one_quarter">
+            <h6 class="title">Keep In Touch</h6>
+            <form class="btmspace-30" method="post" action="#">
+                <fieldset>
+                    <legend>Newsletter:</legend>
+                    <input class="btmspace-15" type="text" value="" placeholder="Email">
+                </fieldset>
+            </form>
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">HTML5 & CSS3 validators</a>
+        </div>
+    </footer>
+</div>
